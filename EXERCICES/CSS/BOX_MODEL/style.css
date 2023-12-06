@@ -1,28 +1,53 @@
 *{
     margin: auto;
+    padding: auto;
     font: "Arial";
+}
 
+a.active{
+    background-color: #fff;
+	color: #820592;
+    height: 100%;
 }
 
 nav , a, ul{
-    
     background-color: #820592;
     color: white;
     font-weight: bold;
     color: white;
     text-decoration: none;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-nav .active{
-    background-color: #d9d9d9;
+li {
+    float: left;
 }
-
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+  
 .h1{
     background-color: #d9d9d9;
-    padding: 25px;
+    padding: 10px;
+    margin: 0px,-80px;
     font-weight: bold;
     border-radius: 10px;
+}
+
+.h2{
+    padding: 10px;
+    margin: 100px;
+}
+
+.form-floating{
+    margin-top: 0px;
 }
 
 .form-control{
@@ -30,23 +55,33 @@ nav .active{
     border-radius: 10px;
 }
 
+.form-control:hover{
+    border-color: #a306b6;
+}
+
+.textarea {
+    height: 600px;
+  }
+
 .btn {
-    background: #a306b6;
+    background-color: #a306b6;
     border-color: #a306b6;
     color: white;
     font-weight: bold;
+    float: left;
     }
     
 .btn:hover {
     border-color: #a306b6;
     color: #a306b6;
-
     }
 
 footer{
     background-color: #898988;
     color: white;
-    margin-top: 100px;
     padding: 10px;
+    width: 100%;
     font-weight: bold;
+    position:fixed;
+    bottom:0;
 }
