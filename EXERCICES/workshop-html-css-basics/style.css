@@ -1,0 +1,68 @@
+:root {
+    --main-color: #a306b6;
+    --white-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    padding: auto;
+    margin: auto;
+}
+
+
+body {
+    background: url(https://jesseseha.files.wordpress.com/2018/03/samuel-scrimshaw-76649-unsplash.jpg) no-repeat center;
+    background-size: auto;
+    color: var(--white-color);
+}
+
+.main-page {
+    background-color: #fff;
+}
+
+h1,
+header {
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    padding: 100px;
+    color: var(--white-color);
+}
+
+h2 {
+    font-weight: bold;
+    padding: 25px 0px;
+}
+
+nav {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    display: flex;
+}
+
+.navbar .nav-link .navbar {
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+
+a .nav-link{
+    color: var(--white-color);
+}
+
+.card {
+    font-weight: bold;
+    padding: 20px 0px;
+    border-radius: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+footer {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: 20px;
+    font-weight: bold;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
