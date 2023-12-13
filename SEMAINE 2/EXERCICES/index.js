@@ -11,3 +11,4 @@ let followers = 109;
 let following = 200; 
 
 // 🏁 Exercise 02 - David is following one more account increment the total of following account
+
