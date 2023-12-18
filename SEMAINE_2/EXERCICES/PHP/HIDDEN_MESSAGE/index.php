@@ -17,16 +17,17 @@ Heureusement, il a également découvert la manière de le déchiffrer, mais c'e
 Il te donne alors les instructions pour que tu développes un petit script permettant d'automatiser le processus.
 Cela pourra être d'autant plus utile s'il rencontre à nouveau ce système de chiffrement plus tard.";
 
+// $persons = explode(' ', $sentence); 
+
+
 $hiddenKey = strlen($sentence)/2;
-$sousChaine = substr($message1,7,);
-$newString = str_replace('@#?', ' ', $sousChaine);
+$sousChaine = substr($sentence,7,$hiddenKey);
+$replacement = str_replace("@#?", " ", $message1);
+
+$newCode = strrev($replacement);
+
+echo $sousChaine. PHP_EOL; 
 
 
-$team = "0@sn9sirppa@#?ia'jgtvryko1";
-$decrypt = substr($team,7,$hiddenKey);
-$persons = explode(' ' , $decrypt); 
-
-echo $hiddenKey. PHP_EOL; 
-echo implode ($persons). PHP_EOL; 
-
+echo $newCode. PHP_EOL; 
 ?>
