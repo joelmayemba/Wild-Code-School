@@ -18,7 +18,17 @@ Il te donne alors les instructions pour que tu développes un petit script perme
 Cela pourra être d'autant plus utile s'il rencontre à nouveau ce système de chiffrement plus tard.";
 
 $hiddenKey = strlen($sentence)/2;
-$sousChaine = substr($sentence,7,$hiddenKey);
+$sousChaine = substr($message1,7,);
 $newString = str_replace('@#?', ' ', $sousChaine);
+
+
+echo $newString. PHP_EOL; 
+
+$team = "0@sn9sirppa@#?ia'jgtvryko1";
+$decrypt = substr($team,7,$hiddenKey);
+$persons = explode(' ' , $decrypt); 
+
+
+echo implode ($persons). PHP_EOL; 
 
 ?>
