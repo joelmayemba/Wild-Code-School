@@ -22,13 +22,11 @@ $sousChaine = substr($message1,7,);
 $newString = str_replace('@#?', ' ', $sousChaine);
 
 
-echo $newString. PHP_EOL; 
-
 $team = "0@sn9sirppa@#?ia'jgtvryko1";
 $decrypt = substr($team,7,$hiddenKey);
 $persons = explode(' ' , $decrypt); 
 
-
+echo $hiddenKey. PHP_EOL; 
 echo implode ($persons). PHP_EOL; 
 
 ?>
