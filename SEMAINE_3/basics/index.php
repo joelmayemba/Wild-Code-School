@@ -1,5 +1,6 @@
 <?php
 
+// https://wildcodeschool.github.io/workshop-php-basics-1/
 
 $trainerName = "Mamba";
 $pokemonName = "Jolteon";

@@ -1,46 +1,25 @@
-<html>
+<?php
 
-<head>
-    <meta charset="utf-8">
-    <title>Welcome to PHPSandbox</title>
-    <link rel="icon" href="https://phpsandbox.io/assets/img/brand/phpsandbox.png">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,400;1,500;1,531;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-</head>
+// Déclaration d'un tableau multidimensionnel
+$actors = [
+    "Indiana Jones" => [
+        "titre" => "Les Aventuriers de l'Arche perdue",
+        "titre" => "Indiana Jones et le Temple Maudit",
+        "titre" => "Indiana Jones et la dernière croisade",
+        "titre" => "Indiana Jones et le royaume du crâne de cristal",
+        "titre" => "Indiana Jones et le Cadran de la Destinée", "année"
+    ],
 
-<body>
-    <div class="h-screen bg-white flex items-center justify-center font-sans text-gray-700" style="font-family: 'Jost', sans-serif">
-        <div class="font-medium items-center text-center flex flex-col justify-center h-full">
-            <div class="flex flex-col justify-center items-center">
-                <?php
+    "Marion Ravenwood" => [
+        "titre" => "Les Aventuriers de l'Arche perdue",
+        "titre" => "Indiana Jones et le royaume du crâne de cristal",
+        "titre" => "Indiana Jones et le Cadran de la Destinée",
+    ],
+    "Mutt" => [
+        "titre" => "Indiana Jones et le royaume du crâne de cristal",
+    ]
+];
 
-                // Déclaration d'un tableau multidimensionnel
-                $films = array(
-                    array("Film A", 2005),
-                    array("Film B", 2000),
-                    array("Film C", 2010)
-                );
+// echo "Dans le film $actors, les principaux acteurs sont : " . PHP_EOL;
 
-                // Autre syntaxe possible avec des clés explicites
-                $livres = array(
-                    array("titre" => "Livre A", "annee" => 2003),
-                    array("titre" => "Livre B", "annee" => 1998),
-                    array("titre" => "Livre C", "annee" => 2015)
-                );
-
-                // Affichage du contenu
-                echo "Contenu du tableau \$films : " . PHP_EOL;
-                print_r($films);
-
-                echo PHP_EOL;
-
-                echo "Contenu du tableau \$livres : " . PHP_EOL;
-                print_r($livres);
-
-                ?>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
+echo($actors);
