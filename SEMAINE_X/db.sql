@@ -20,12 +20,13 @@ INSERT INTO `WIZARD`(
     BIRTH_PLACE,
     BIOGRAPHY
 ) VALUES (
-    `HARRY`,
-    `POTTER`,
-    `NO``,
-    /1980-07-31,
-    ``,
-    ``
+    "",
+    "Harry",
+    "POTTER",
+    TRUE,
+    "1980-07-31",
+    "LONDON",
+    ""
 );
 
 CREATE TABLE IF NOT EXISTS `WILD_DB_QUEST`.`SCHOOL` (
@@ -37,10 +38,3 @@ CREATE TABLE IF NOT EXISTS `WILD_DB_QUEST`.`SCHOOL` (
 );
 
 SHOW TABLES FROM WILD_DB_QUEST;
-
-SELECT
-    *
-FROM
-    WIZARD
-WHERE
-    LASTNAME='Potter';
