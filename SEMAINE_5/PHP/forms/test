@@ -1,0 +1,75 @@
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $lastname = isset($_POST["lastname"]) ? $_POST["lastname"] : "";
+    $firstname = isset($_POST["firstname"]) ? $_POST["firstname"] : "";
+    $phone = isset($_POST["phone"]) ? $_POST["phone"] : "";
+    $email = isset($_POST["email"]) ? $_POST["email"] : "";
+}
+
+// var_dump($_POST);
+
+// $errors = [];
+
+// if (empty($lastname)) {
+//     $errors[] = "Le nom de l'entreprise est obligatoire.";
+// }
+
+// if (empty($firstname)) {
+//     $errors[] = "Le nom de l'utilisateur est obligatoire.";
+// }
+
+// if (empty($email)) {
+//     $errors[] = "L'adresse e-mail est obligatoire.";
+// } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+//     $errors[] = "L'adresse e-mail n'est pas valide.";
+// }
+
+// if (empty($contactMessage)) {
+//     $errors[] = "Le message est obligatoire.";
+// } elseif (strlen($contactMessage) < $minMessage) {
+//     $errors[] = "Le message doit faire plus de 30 caractères.";
+// }
+
+// // var_dump($tab["img"]); 
+
+// if (!empty($errors)) {
+//     require 'error.php';
+//     die();
+// }
+
+
+?>
+
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retour de vos données</title>
+    <link rel="stylesheet" href="css/retour.css">
+</head>
+
+<?php var_dump($_POST); ?>
+
+<body>
+    <main>
+        <div class="login-box">
+            <h2>Retour de vos données</h2>
+
+            <div class="user-box">
+                <p>Merci <?= $firstname ?> <?= $lastname ?> de nous avoir contacté à propos de </P>
+
+                <p>Un de nos conseillers vous contactera soit à l’adresse <?= $email ?> ou par téléphone au <?= $phone ?> dans les plus brefs délais pour traiter votre demande :</p>
+
+                <!-- <?= $message ?> -->
+
+            </div>
+    </main>
+
+</body>
+
+</html>
