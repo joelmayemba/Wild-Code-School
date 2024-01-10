@@ -19,17 +19,19 @@
                     autofocus="" />
                 <input type="text" class="form-control" name="lastname" placeholder="Nom" required="" autofocus="" />
                 <input type="email" class="form-control" name="email" placeholder="Email" required="" autofocus="" />
-                <input type="tel" class="form-control" name="phone" placeholder="Téléphone" required="" autofocus="" />
+                <input type="tel" class="form-control" name="tel" placeholder="Téléphone" required="" autofocus="" />
                 <select name="SelectSubject" id="SelectSubject" class="form-control">
-                    <option value="" placeholder="-- Choisissez le sujet --"></option>
-                    <option value="incriptions">Incriptions</option>
-                    <option value="remboursement">Demande de remboursement</option>
-                    <option value="others">Autres</option>
+                    <option value="" placeholder="">-- Choisissez le sujet --</option>
+                    <option value="Demande d'incriptions">Demande d'incriptions</option>
+                    <option value="Demande de remboursement">Demande de remboursement</option>
+                    <option value="Autres">Autres</option>
                 </select>
                 <label for="message">Message</label>
+
                 <textarea rows="5" class="form-control" name="message" id="message"></textarea>
 
-                <div><button class="btn btn-lg btn-primary btn-block" type="submit">Envoyer</button></div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Envoyer</button>
+
             </form>
         </div>
 
@@ -40,5 +42,3 @@
 </body>
 
 </html>
-
-

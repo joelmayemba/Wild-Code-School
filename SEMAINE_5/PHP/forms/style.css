@@ -1,13 +1,33 @@
-body {
-    background: #eee !important;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root {
+    --main-color: #30cfd0;
+    --secondary-color: #330867;
+    --error-color: #ff0000;
+    --white-color: #f5f5f5;
+    --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --gradient-background: linear-gradient(225deg, var(--main-color) 0%, var(--secondary-color) 100%);
 }
 
-.user-box p{
-font-style: italic;
+html ,body {
+    background-size: contain;
+    background-color: var(--main-color);
+    background-image: var(--gradient-background);
+    font-family: var(--main-font);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
-h2 , .btn {
+.message p {
+    font-style: italic;
+
+}
+
+.error {
+    color: var(--error-color);
+}
+
+h2,
+.btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,17 +35,29 @@ h2 , .btn {
 }
 
 form .btn {
-    background: purple;
+    background: var(--gradient-background);
     margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn:hover {
+    background: var(--main-color-color);
+
 }
 
 span {
     font-weight: bold;
+    color: var(--main-color);
+
 }
 
 .wrapper {
     margin-top: 80px;
     margin-bottom: 80px;
+
 }
 
 .form-signin {
@@ -33,7 +65,7 @@ span {
     padding: 15px 35px 45px;
     margin: 0 auto;
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid (0, 0, 0, 0.1);
 
     .form-control {
         position: relative;
@@ -46,7 +78,9 @@ span {
             z-index: 2;
         }
     }
-    input[type="text"],select{
+
+    input[type="text"],
+    select {
         margin-bottom: -1px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -56,5 +90,20 @@ span {
     select {
         margin-top: 20px;
         margin-bottom: 20px;
+
+    }
+
+    input,
+    select,
+    textarea,
+    :focus {
+        border-color: var(--main-color);
+        transition: border-color 0.3s ease;
+    }
+
+    select option {
+        margin: 40px;
+        background-color: var(--white-color);
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
     }
 }

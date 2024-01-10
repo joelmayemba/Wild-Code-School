@@ -3,11 +3,50 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lastname = isset($_POST["lastname"]) ? $_POST["lastname"] : "";
     $firstname = isset($_POST["firstname"]) ? $_POST["firstname"] : "";
-    $phone = isset($_POST["tel"]) ? $_POST["tel"] : "";
+    $tel = isset($_POST["tel"]) ? $_POST["tel"] : "";
     $email = isset($_POST["email"]) ? $_POST["email"] : "";
     $subject = isset($_POST["SelectSubject"]) ? $_POST["SelectSubject"] : "";
     $message = isset($_POST["message"]) ? $_POST["message"] : "";
 }
+
+$errors = [];
+
+
+if (empty($lastname)) {
+    $errors[] = "Le nom est obligatoire.";
+}
+
+if (empty($firstname)) {
+    $errors[] = "Le prénom est obligatoire.";
+}
+
+if (empty($tel)) {
+    $errors[] = "Le numéro de téléphone est obligatoire.";
+} elseif (strlen($tel) != 10) {
+    $errors[] = "Le numéro de téléphone n'est pas valide.";
+}
+
+if (empty($email)) {
+    $errors[] = "L'adresse e-mail est obligatoire.";
+} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = "L'adresse e-mail n'est pas valide.";
+}
+
+if (empty($subject)) {
+    $errors[] = "Le sujet est obligatoire.";
+}
+
+if (empty($message)) {
+    $errors[] = "Le message est obligatoire.";
+} elseif (strlen($message) < 10) {
+    $errors[] = "Le message est trop court";
+}
+
+if (!empty($errors)) {
+    require 'error.php';
+    die();
+}
+
 
 ?>
 
@@ -20,19 +59,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="style.css">
 </head>
 
-<?= var_dump($_POST); ?>
+<!-- <?= var_dump($_POST); ?> -->
 
 <body>
-    
+
     <main>
         <div class="wrapper">
             <form class="form-signin">
-            <h2>Message envoyé</h2>
+                <h2>Message envoyé</h2>
                 <div class="row">
-                    <p>Merci <span><?= $firstname ?> <?= $lastname ?> </span> nous avoir contacté à propos de <?= $subject ?> </P>
-                    <p>Un de nos conseillers vous contactera soit à l’adresse <span><?= $email ?></span> ou par téléphone au <?= $phone ?> dans les plus brefs délais pour traiter votre demande :</p>
-                    <div class="user-box">
-                        <p><?= $message ?></p>
+                    <p>Merci <span><?= $firstname ?> <?= $lastname ?></span> de nous avoir contacté à propos de <span><?= $subject ?></span> </P>
+                    <p>Un de nos conseillers vous contactera soit à l’adresse <span><?= $email ?></span> ou par téléphone au <span><?= $tel ?></span> dans les plus brefs délais pour traiter votre demande :</p>
+                    <div class="message">
+                        <span>
+                            <p><?= $message ?></p>
+                        </span>
                     </div>
                 </div>
             </form>
