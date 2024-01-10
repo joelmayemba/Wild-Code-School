@@ -10,6 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $errors = [];
+// $patternTel = "/^\+(?:[0-9] ?){6,14}[0-9]$/";
 
 
 if (empty($lastname)) {
@@ -68,7 +69,7 @@ if (!empty($errors)) {
             <form class="form-signin">
                 <h2>Message envoyé</h2>
                 <div class="row">
-                    <p>Merci <span><?= $firstname ?> <?= $lastname ?></span> de nous avoir contacté à propos de <span><?= $subject ?></span> </P>
+                    <p>Merci <span><?= $firstname ?> <?= $lastname ?></span> de nous avoir contacté à propos de <span class="subject"><?= $subject ?></span> </P>
                     <p>Un de nos conseillers vous contactera soit à l’adresse <span><?= $email ?></span> ou par téléphone au <span><?= $tel ?></span> dans les plus brefs délais pour traiter votre demande :</p>
                     <div class="message">
                         <span>
