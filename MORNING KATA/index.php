@@ -1,63 +1,63 @@
 <?php
 
-// // Even or Odd
-// function even_or_odd($n)
-// {
-//     if ($n % 2 == 0) {
-//         return "Even";
-//     } else {
-//         return "Odd";
-//     }
-// }
+// Even or Odd
+function even_or_odd($n)
+{
+    if ($n % 2 == 0) {
+        return "Even";
+    } else {
+        return "Odd";
+    }
+}
 
-// // Opposite number
-// function opposite($n)
-// {
-//     return -$n;
-// }
+// Opposite number
+function opposite($n)
+{
+    return -$n;
+}
 
-// // String repeat
-// function repeatStr($n, $str)
-// {
-//     return str_repeat($str, $n);
-// }
+// String repeat
+function repeatStr($n, $str)
+{
+    return str_repeat($str, $n);
+}
 
-// // Jenny's secret message
-// function greet($name)
-// {
-//     if ($name === 'Johnny') {
-//         return 'Hello, my love!';
-//     } else {
-//         return "Hello, $name!";
-//     }
-// }
+// Jenny's secret message
+function greet($name)
+{
+    if ($name === 'Johnny') {
+        return 'Hello, my love!';
+    } else {
+        return "Hello, $name!";
+    }
+}
 
-// // Convert boolean values to strings 'Yes' or 'No'.
-// function boolToWord($bool)
-// {
-//     if ($bool == true) {
-//         $bool = "Yes";
-//     } else {
-//         $bool = "No";
-//     }
-//     return $bool;
-// }
+// Convert boolean values to strings 'Yes' or 'No'.
+function boolToWord($bool)
+{
+    if ($bool == true) {
+        $bool = "Yes";
+    } else {
+        $bool = "No";
+    }
+    return $bool;
+}
 
-// // Remove First and Last Character
-// function remove_char(string $s): string
-// {
+// Remove First and Last Character
+function remove_char(string $s): string
+{
 
-//     return substr($s, 1, -1);
-// }
+    return substr($s, 1, -1);
+}
 
-// function getCount($str)
-// {
-//     $vowelsCount = 0;
+function getCount($str)
+{
+    $vowelsCount = 0;
 
-//     // enter your magic here
+    // enter your magic here
 
-//     return $vowelsCount;
-// }
+    return $vowelsCount;
+}
 
 // Get the Middle Character
 function getMiddle($text)
