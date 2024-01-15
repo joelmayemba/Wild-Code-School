@@ -1,0 +1,15 @@
+{
+    "name": "execu/wild-code-school",
+    "autoload": {
+        "psr-4": {
+            "Execu\\WildCodeSchool\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Joël MAYEMBA",
+            "email": "joelmayemba@gmail.com"
+        }
+    ],
+    "require": {}
+}

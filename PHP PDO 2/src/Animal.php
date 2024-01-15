@@ -17,3 +17,4 @@ class Animal
         $this->threatenedLevel = $threatenedLevel;
     }
 }
+
