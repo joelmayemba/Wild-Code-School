@@ -6,4 +6,5 @@ class Animal
     public float $size;
     public bool $carnivorous;
     public int $pawNumber;
+    public string $threatenedLevel;
 }

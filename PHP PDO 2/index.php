@@ -3,7 +3,7 @@
 
 require __DIR__ . '../src/Animal.php';
 
-$animal1 = new Animal();
+$lion = new Animal('Lion', 2.06, true, 4, 'VU');
 $animal2 = new Animal();
 
-var_dump($animal1);
+var_dump($lion);
