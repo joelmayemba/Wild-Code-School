@@ -16,5 +16,29 @@ class Animal
         $this->pawNumber = $pawNumber;
         $this->threatenedLevel = $threatenedLevel;
     }
-}
 
+    public function sayHello(): string
+    {
+        return $this->name;
+    }
+
+    public function getSize(): float
+    {   
+        
+        return $this->size;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function isCarnivorous(): bool
+    {
+        return $this->carnivorous;
+    }
+    public function getThreatenedLevel(): string
+    {
+        return $this->threatenedLevel;
+    }
+}

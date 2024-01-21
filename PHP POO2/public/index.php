@@ -5,10 +5,14 @@
 
 require __DIR__ . '/../src/Animal.php';
 
-// $animal1 = new Animal();
-// $animal2 = new Animal();
+$lion = new Animal('Lion', 2.06, true, 4, 'VU');
+$parrot = new Animal('Parrot', 0.81, false, 2, 'LC');
+$seal = new Animal('Seal', 7, false, 2, 'EN');
 
-// $animals = [$animal1, $animal2];
+$animals = [$lion,$parrot,$seal];
+
+var_dump($animals);
+
 
 
 /***************************************/

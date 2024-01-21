@@ -20,13 +20,13 @@
         <div class="animals">
             <?php foreach ($animals ?? [] as $key => $animal) : ?>
                 <article>
-                    <?php if(method_exists($animal, 'sayHello')) : ?> 
-                    <div class="hello">
-                        <?= $animal->sayHello() ?>
-                    </div>
+                    <?php if (method_exists($animal, 'sayHello')) : ?>
+                        <div class="hello">
+                            <?= $animal->sayHello() ?>
+                        </div>
                     <?php endif; ?>
                     <div></div>
-                    <img class="animal-img" width="<?= method_exists($animal, 'getSize') ? $animal->getSize() : '100' . '%' ?>" src="assets/images/animals/<?= method_exists($animal, 'getName') ? $animal->getName() : 'undefined' . $key % 3 ?>.png" alt="">
+                    <img class="animal-img" width="<?= method_exists($animal, 'getSize') ? $animal->getSize() : '100' . '%' ?>" src="assets/images/animals/<?= method_exists($animal, 'getName') ? $animal->getName() : 'undefined' . $key % 3 ?>.jpg" alt="">
                     <div class="notice">
                         <div class="title">
                             <h1>
@@ -39,7 +39,10 @@
                         <hr />
                     </div>
                 </article>
-            <?php endforeach; ?>
+            <?php endforeach; 
+            
+            var_dump($animals);
+?>
         </div>
     </main>
 </body>
