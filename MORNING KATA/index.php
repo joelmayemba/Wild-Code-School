@@ -179,6 +179,37 @@ function longestConsec($strarr, $k)
     return $result;
 }
 
+// Build a pile of Cubes
+function findNb($m) {
+    $n = 1;
+    $volume = 0;
+    
+    while ($volume < $m) {
+        $volume += pow($n, 3);
+        if ($volume == $m) {
+            return $n;
+        }
+        $n++;
+    }
+    
+    return -1;
+}
+
+// Tortoise racing
+function race($v1, $v2, $g) {
+    if ($v1 >= $v2) {
+        return null;
+    }
+    
+    $time_to_catch_lead = $g / ($v2 - $v1);
+    
+    $hours = floor($time_to_catch_lead);
+    $minutes = floor(($time_to_catch_lead * 60) % 60);
+    $seconds = floor(($time_to_catch_lead * 3600) % 60);
+    
+    return [$hours, $minutes, $seconds];
+}
+
 // Basic Mathematical Operations
 function basicOp($op, $val1, $val2)
 {
