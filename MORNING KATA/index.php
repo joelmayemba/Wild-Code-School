@@ -1,48 +1,5 @@
 <?php
 
-// Even or Odd
-function even_or_odd($n)
-{
-    if ($n % 2 == 0) {
-        return "Even";
-    } else {
-        return "Odd";
-    }
-}
-
-// Opposite number
-function opposite($n)
-{
-    return -$n;
-}
-
-// String repeat
-function repeatStr($n, $str)
-{
-    return str_repeat($str, $n);
-}
-
-// Jenny's secret message
-function greet($name)
-{
-    if ($name === 'Johnny') {
-        return 'Hello, my love!';
-    } else {
-        return "Hello, $name!";
-    }
-}
-
-// Convert boolean values to strings 'Yes' or 'No'.
-function boolToWord($bool)
-{
-    if ($bool == true) {
-        $bool = "Yes";
-    } else {
-        $bool = "No";
-    }
-    return $bool;
-}
-
 // Remove First and Last Character
 function remove_char(string $s): string
 {
@@ -180,10 +137,11 @@ function longestConsec($strarr, $k)
 }
 
 // Build a pile of Cubes
-function findNb($m) {
+function findNb($m)
+{
     $n = 1;
     $volume = 0;
-    
+
     while ($volume < $m) {
         $volume += pow($n, 3);
         if ($volume == $m) {
@@ -191,22 +149,73 @@ function findNb($m) {
         }
         $n++;
     }
-    
+
     return -1;
 }
 
+// Directions Reduction
+function dirReduc($arr)
+{
+    $oppositeMap = [
+        "NORTH" => "SOUTH",
+        "SOUTH" => "NORTH",
+        "EAST" => "WEST",
+        "WEST" => "EAST"
+    ];
+
+    $stack = [];
+
+    foreach ($arr as $direction) {
+        if (!empty($stack) && $stack[count($stack) - 1] === $oppositeMap[$direction]) {
+            array_pop($stack);
+        } else {
+            $stack[] = $direction;
+        }
+    }
+
+    return $stack;
+}
+
+// Integers: Recreation One
+function listSquared($m, $n)
+{
+    $result = [];
+
+    for ($num = $m; $num <= $n; $num++) {
+        $divisors = findDivisors($num);
+        $sumOfSquares = array_sum(array_map(function ($divisor) {
+            return $divisor * $divisor;
+        }, $divisors));
+
+        if (isPerfectSquare($sumOfSquares)) {
+            $result[] = [$num, $sumOfSquares];
+        }
+    }
+
+    return $result;
+}
+
+
+
+function isPerfectSquare($num)
+{
+    $root = sqrt($num);
+    return $root == intval($root);
+}
+
 // Tortoise racing
-function race($v1, $v2, $g) {
+function race($v1, $v2, $g)
+{
     if ($v1 >= $v2) {
         return null;
     }
-    
+
     $time_to_catch_lead = $g / ($v2 - $v1);
-    
+
     $hours = floor($time_to_catch_lead);
     $minutes = floor(($time_to_catch_lead * 60) % 60);
     $seconds = floor(($time_to_catch_lead * 3600) % 60);
-    
+
     return [$hours, $minutes, $seconds];
 }
 
@@ -231,3 +240,13 @@ function format_money(float $amount): string
 {
     return floatval($amount);
 }
+
+
+// Invert values
+function invert(array $a): array
+{
+    return array_map(function ($num) {
+        return -$num;
+    }, $a);
+}
+
